@@ -1,0 +1,22 @@
+.footer {
+    height: 1px; //without it child block can not take 100% height of parent`s block height
+    min-height: 10vh;
+}
+
+.footer__container {
+    border-top: 1px solid #e6eaed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%
+}
+
+.footer__list {
+    min-width: 120px;
+    width: 15%;
+}
+
+.footer__copyrights {
+    color: #b9c0c6;
+    font-family: "Open Sans", sans-serif;
+}

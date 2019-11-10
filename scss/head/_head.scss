@@ -1,0 +1,48 @@
+.head {
+    min-height: 100vh;
+    position: relative;
+}
+
+.head_theme_man {
+    background: url("../img/background-man.jpg") no-repeat;
+    background-size: 100%;
+}
+
+.head__box {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 500px;
+}
+
+.text-type-1 {
+    @include text-1;
+    color: #314a5b;
+}
+
+.head__heading {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+
+.head__text {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.2rem;
+    color: #314a5b;
+}
+
+.head__btn {
+    font-family: "Open Sans", sans-serif;
+    background-color: $color-1;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    padding: 5px;
+    width: 160px;
+    height: 50px;
+    border-radius: 5px; 
+    line-height: 3rem;
+    margin-top: 25px;
+    text-transform: uppercase;
+}
+

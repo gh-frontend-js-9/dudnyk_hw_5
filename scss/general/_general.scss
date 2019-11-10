@@ -1,0 +1,35 @@
+$color-1: #fa5c65;
+
+@mixin text-1 {
+    font-family: "Montserrat",sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.page {
+    font-size: 14px;
+}
+
+.page__inner {
+    width: 80%;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn {
+    background-color: $color-1;
+}
+
+.anchor {
+    text-decoration: none;
+}
+
+.text-with-point:after {
+    content: ".";
+    color: $color-1;
+}

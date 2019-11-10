@@ -1,0 +1,4 @@
+.content {
+    min-height: 100vh;
+    height: 1px // //without it child block can not take 100% height of parent`s block height
+}
