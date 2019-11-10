@@ -8,7 +8,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100%
+    height: 100%;
 }
 
 .footer__list {
@@ -18,5 +18,15 @@
 
 .footer__copyrights {
     color: #b9c0c6;
-    font-family: "Open Sans", sans-serif;
+    font-family: $font-family-2;
+}
+
+@media screen and (max-width: 550px) {
+    .footer__container {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .footer__copyrights {
+        margin-bottom: 10px;
+    }
 }

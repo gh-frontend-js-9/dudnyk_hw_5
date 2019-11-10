@@ -1,9 +1,22 @@
 $color-1: #fa5c65;
+$heading-color: #314a5b;
+$description-color: #9aa0ab;
 
-@mixin text-1 {
-    font-family: "Montserrat",sans-serif;
-    font-weight: 700;
+$font-family-1: "Motserrat",sans-serif;
+$font-family-2: "Open Sans", sans-serif;
+
+@mixin text {
+    font-family: $font-family-1;
     text-transform: uppercase;
+}
+
+@mixin heading {
+    @include text;
+    font-weight: 700;
+}
+
+.html {
+    scroll-behavior: smooth;
 }
 
 .page {
@@ -15,21 +28,61 @@ $color-1: #fa5c65;
     margin: 0 auto;
     height: 100%;
 }
+.logo {
+    background-color: $color-1;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
 
 .box {
     display: flex;
     flex-direction: column;
 }
 
+.heading {
+    @include heading;
+    margin-bottom: 5px;
+}
+
 .btn {
-    background-color: $color-1;
+    background: none;
+    border: none;
+    color: $color-1;
+    @include text;
+    width: 60px;
+    padding: 0px;
+    cursor: pointer;
+}
+
+.btn::after {
+    content: '\2192';
+}
+.btn_mgtop_10 {
+    margin-top: 10px;
 }
 
 .anchor {
     text-decoration: none;
 }
 
-.text-with-point:after {
+.text-with-point::after {
     content: ".";
     color: $color-1;
+}
+
+.description-text {
+    font-family: $font-family-2;
+    color: $description-color;
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size:14px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .page__inner {
+        width: 95%;
+    }
 }

@@ -1,4 +1,147 @@
-.content {
+.content__container {
     min-height: 100vh;
-    height: 1px // //without it child block can not take 100% height of parent`s block height
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+/*Snippets*/
+
+.snippets {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.snippets__heading {
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.snipets_box {
+    flex-basis: 25%;
+    min-height: 200px;    
+}
+@media screen and (max-width:500px) {
+    .snippets {
+        justify-content: center;
+    }
+    .snipets_box {
+        flex-basis: 70%;
+    }
+}
+
+/*Portfolio*/
+
+.portfolio {
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.portfolio__img-container_theme-laptop {
+    background: url("../img/MacBook.jpg") no-repeat;
+    background-position: center;
+}
+
+.portfolio__img-container{
+    height: 400px;
+    width: 40%;
+}
+
+.portfolio__box {
+    flex-basis: 40%;
+    margin-right: 10%;
+}
+
+@media screen and (max-width: 900px) {
+    .portfolio {
+        justify-content: center;    
+    }
+    .portfolio__img-container {
+        width: 90%;
+    }
+    .portfolio__box {
+        flex-basis: 60%;
+        margin-right: 0px;
+    }
+}
+
+.portfolio__heading {
+    font-size: 1.9rem;
+}
+
+.posrtfolio__text {
+    font-family: $font-family-2;
+    color: $heading-color;
+    font-size: 1rem;
+}
+
+/*Team*/
+
+.team {
+    margin: 20px 0 40px 0;
+}
+
+.team__heading {
+    font-size: 2rem;
+}
+
+
+.team__workers {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0 30px 0;
+    flex-wrap: wrap;
+}
+
+.team__worker {
+    display: flex;
+    flex-basis: 32%;
+}
+
+@media screen and (max-width: 768px){
+    .team__workers {
+        justify-content: center;
+    }
+    .team__worker {
+        margin-top: 20px;
+        flex-basis: 70%;
+    }
+}
+
+.team__worker-img-cont{
+    min-width: 120px;
+    border-radius: 50%;
+    min-height: 120px;;
+}
+
+@for $i from 1 through 3{
+    .team__worker-img_theme_man#{$i} {
+        background: url("../img/man-#{$i}.jpg") no-repeat;
+        background-position: center;
+    }
+}
+
+.team__worker-job {
+    color: $color-1;
+    font-family: $font-family-2;
+}
+
+.team__worker-info {
+    justify-content: center;
+}
+
+.team__description {
+    margin: 5px 0 5px 0; 
+}
+
+.team__btn {
+    float: right;
+    right: 6px;
+    bottom: 0px;    
 }
