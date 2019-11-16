@@ -1,36 +1,40 @@
 .content__container {
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     justify-content: space-around;
 }
 
 /*Snippets*/
 
+.content__snippets {
+    justify-content: space-between;
+}
+
 .snippets {
     display: flex;
-    justify-content: space-between;
     margin-top: 20px;
     flex-wrap: wrap;
+
+    &__heading {
+        font-size: 1.5rem;
+        @include flex-column;
+    }
+
+    &__box {
+        flex-basis: 25%;
+        min-height: 200px;
+        @include flex-column;    
+    }
 }
 
-.snippets__heading {
-    font-size: 1.5rem;
-    display: flex;
-    flex-direction: column;
-}
-
-.snipets_box {
-    flex-basis: 25%;
-    min-height: 200px;    
-}
 @media screen and (max-width:500px) {
     .snippets {
         justify-content: center;
-    }
-    .snipets_box {
-        flex-basis: 70%;
-    }
+    
+        &__box {
+            flex-basis: 70%;
+        }
+    }   
 }
 
 /*Portfolio*/
@@ -41,107 +45,129 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-}
 
-.portfolio__img-container_theme-laptop {
-    background: url("../img/MacBook.jpg") no-repeat;
-    background-position: center;
-}
 
-.portfolio__img-container{
-    height: 400px;
-    width: 40%;
-}
-
-.portfolio__box {
-    flex-basis: 40%;
-    margin-right: 10%;
-}
-
-@media screen and (max-width: 900px) {
-    .portfolio {
-        justify-content: center;    
+    &__img-container{
+        height: 400px;
+        width: 40%;
+        min-width: 400px;
     }
-    .portfolio__img-container {
-        width: 90%;
-    }
-    .portfolio__box {
-        flex-basis: 60%;
-        margin-right: 0px;
-    }
-}
 
-.portfolio__heading {
-    font-size: 1.9rem;
-}
+    &__img-container_theme_laptop {
+        background: url("../img/MacBook.jpg") no-repeat;
+        background-position: left;
+    }
 
-.posrtfolio__text {
-    font-family: $font-family-2;
-    color: $heading-color;
-    font-size: 1rem;
+    &__box {
+        @include flex-column;
+        flex-basis: 40%;
+        margin-right: 5%;
+    }
+
+    @media screen and (max-width: 950px) {
+        &__img-container {
+            min-width: 300px;
+        }
+        &__img-container_theme_laptop {
+            background-size: 300px;
+        }
+        &__box {
+            margin-right: 0px;
+        }
+    }
+
+    &__heading {
+        font-size: 1.9rem;
+    }
+
+    &__text {
+        font-family: $font-family-2;
+        color: $heading-color;
+        font-size: 1rem;
+    }
+
+    @media screen and (max-width: 768px) {
+        & {
+            justify-content: center;
+        }
+        &__img-container {
+            display: none;
+        }
+        &__box {
+            flex-basis: 70%;
+        }
+    }
+ 
 }
 
 /*Team*/
 
 .team {
     margin: 20px 0 40px 0;
-}
 
-.team__heading {
-    font-size: 2rem;
-}
-
-
-.team__workers {
-    display: flex;
-    justify-content: space-between;
-    margin: 30px 0 30px 0;
-    flex-wrap: wrap;
-}
-
-.team__worker {
-    display: flex;
-    flex-basis: 32%;
-}
-
-@media screen and (max-width: 768px){
-    .team__workers {
-        justify-content: center;
+    &__heading {
+        font-size: 2rem;
     }
-    .team__worker {
+
+    &__workers {
+        display: flex;
+        justify-content: space-between;
+        margin: 30px 0 30px 0;
+        flex-wrap: wrap;
+    }
+
+    &__worker {
+        display: flex;
+        flex-basis: 30%;
+        min-width: 230px;
         margin-top: 20px;
-        flex-basis: 70%;
     }
-}
 
-.team__worker-img-cont{
-    min-width: 120px;
-    border-radius: 50%;
-    min-height: 120px;;
-}
-
-@for $i from 1 through 3{
-    .team__worker-img_theme_man#{$i} {
-        background: url("../img/man-#{$i}.jpg") no-repeat;
-        background-position: center;
+    &__worker-img {
+        min-width: 110px;
+        min-height: 110px;
+        margin-right: 5px;
     }
-}
 
-.team__worker-job {
-    color: $color-1;
-    font-family: $font-family-2;
-}
+    @media screen and (max-width: 768px){
+        &__workers {
+            justify-content: center;
+        }
+        &__worker {
+            flex-basis: 70%;
+        }
+        &__heading {
+            text-align: center;
+        }
+        &__motto {
+            display: block;
+            text-align: center;
+        }
+    }
 
-.team__worker-info {
-    justify-content: center;
-}
+    &__worker-name {
+        font-size: 1.2rem;
+        color: $heading-color;
+    }
 
-.team__description {
-    margin: 5px 0 5px 0; 
-}
+    &__worker-job {
+        color: $description-color;
+        font-family: $font-family-2;
+        font-weight: 700;
+    }
 
-.team__btn {
-    float: right;
-    right: 6px;
-    bottom: 0px;    
+    &__worker-info {
+        justify-content: center;
+        @include flex-column;
+    }
+
+    &__description {
+        margin: 5px 0 5px 0; 
+    }
+
+    &__btn {
+        float: right;
+        right: 6px;
+        bottom: 0px;    
+    }
 }

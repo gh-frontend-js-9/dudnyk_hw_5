@@ -15,6 +15,11 @@ $font-family-2: "Open Sans", sans-serif;
     font-weight: 700;
 }
 
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
 .html {
     scroll-behavior: smooth;
 }
@@ -28,10 +33,18 @@ $font-family-2: "Open Sans", sans-serif;
     margin: 0 auto;
     height: 100%;
 }
+
 .logo {
     background-color: $color-1;
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
+}
+
+.list {
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    margin: 10px;
 }
 
 .box {
@@ -44,6 +57,22 @@ $font-family-2: "Open Sans", sans-serif;
     margin-bottom: 5px;
 }
 
+.button {
+    font-family: $font-family-2;
+    background-color: $color-1;
+    border-radius: 5px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s ease-out;
+}
+
+.button:hover {
+    transform: scale(1.1);
+    background-attachment: blue;
+}
+
+
 .btn {
     background: none;
     border: none;
@@ -52,20 +81,22 @@ $font-family-2: "Open Sans", sans-serif;
     width: 60px;
     padding: 0px;
     cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    color: $heading-color;
 }
 
 .btn::after {
     content: '\2192';
-}
-.btn_mgtop_10 {
-    margin-top: 10px;
 }
 
 .anchor {
     text-decoration: none;
 }
 
-.text-with-point::after {
+.text-with-dot::after {
     content: ".";
     color: $color-1;
 }
@@ -74,6 +105,8 @@ $font-family-2: "Open Sans", sans-serif;
     font-family: $font-family-2;
     color: $description-color;
 }
+
+/* Media */
 
 @media screen and (max-width: 768px) {
     html {

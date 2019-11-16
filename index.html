@@ -19,28 +19,36 @@
       
           <header class="header">
             
-            <div class="logo header__logo"><span class="header__logo-text">Freelancer</span></div> 
+            <h1 class="logo header__logo">
+              <a href="#" class="anchor header__logo-anchor">Freelancer</a>
+            </h1> 
                 
-            <nav class="header__navigation">
-            
-              <ul class="list header__list">
-                <li class="header__item header__item-text"><a href="#" class="anchor header__link">About</a></li>
-                <li class="header__item header__item-text"><a href="#" class="anchor header__link">Work</a></li>
-                <li class="header__item header__item-text"><a href="#" class="anchor header__link">Portfolio</a></li>
-                <li class="header__item header__item-text"><a href="#contact" class="anchor header__link">Contact</a></li>
-                <li class="header__item"><a href="#"><img src="./img/Twitter.png" alt="twitter"></a></li>
-                <li class="header__item"><a href="#"><img src="./img/Facebook.png" alt="facebook"></a></li>
-              </ul>
-            
+            <nav class="nav nav_state">
+              <!-- I re-read the methodology, and tried to write it according to it. -->
+              <ul class="list nav__list"> <!-- list is a mixin, and nav__list and other is an element of nav block, which determine the geometry-->
+                <li class="nav__list-item"><a href="#" class="anchor nav__link-text">About</a></li>
+                <li class="nav__list-item"><a href="#" class="anchor nav__link-text">Work</a></li>
+                <li class="nav__list-item"><a href="#" class="anchor nav__link-text">Portfolio</a></li>
+                <li class="nav__list-item"><a href="#" class="anchor nav__link-text">Contact</a></li>
+                <li class="nav__list-item"><a href="#" class="nav__img nav__img_social_1"></a></li>
+                <li class="nav__list-item"><a href="#" class="nav__img nav__img_social_2"></a></li>
+              </ul>              
             </nav>
               
+            <div class="burger burger_state"><span class="burger__line"></span></div>
+
           </header>
           
-          <div class="box head__box">
+          <div class="motto-block head__motto-block">
             
-            <h1 class="text-type-1 head__heading"><span>Intelligence</span><span>is nothing without</span><span class="text-with-point">ambition</span></h1>
-            <span class="head__text">We’re small but impressive creative agency.</span>
-            <div class="head__btn">Read More</div>
+            <p class="motto-block__heading">
+              <span>Intelligence</span>
+              <span>is nothing without</span>
+              <span class="text-with-dot">ambition</span>
+            </p>
+
+            <span class="motto-block__text">We’re small but impressive creative agency.</span>
+            <a href="#" class="anchor button head__motto-block-button">Read More</a>
           
           </div>
 
@@ -52,61 +60,80 @@
 
       <div class="page__inner content__container">
           
-        <div class="snippets">
+        <section class="snippets content__snippets">
 
-          <div class="box snipets_box">
+          <div class="snippets__box">
             <h2 class="heading snippets__heading"><span>Peace</span> <span class="text-with-point">of Mind</span></h2>
-            <p class="description-text">You’re safe with us. The privacy and security of your financial information is our top priority.</p>
-            <button class="btn btn_mgtop_10">More</button>
+            
+            <p class="description-text">
+              You’re safe with us. The privacy and security of your financial information is our top priority.
+            </p>
+
+            <a href="#" class="anchor btn">More</a>
           </div>
 
-          <div class="box snipets_box">
+          <div class="snippets__box">
               <h2 class="heading snippets__heading"><span class="text-with-point">Free</span> Actually free</h2>
-              <p class="description-text">No more pricing grids. No more fine print. Sending and receiving cash is free without gimmicks.</p>
-              <button class="btn btn_mgtop_10">More</button>
+              
+              <p class="description-text">
+                No more pricing grids. No more fine print. Sending and receiving cash is free without gimmicks.
+              </p>
+
+              <a href="#" class="anchor btn">More</a>
           </div>
 
-          <div class="box snipets_box">
+          <div class="snippets__box">
               <h2 class="heading snippets__heading"><span>Simple</span> <span class="text-with-point">payments</span></h2>
-              <p class="description-text">The same debit card you use to buy coffee lets deposit money straight to your bank account.</p>
-              <button class="btn btn_mgtop_10">More</button>
+              <p class="description-text">
+                The same debit card you use to buy coffee lets deposit money straight to your bank account.
+              </p>
+              <a href="#" class="anchor btn">More</a>
           </div>
 
-        </div>
+        </section>
 
 
         
 
-        <div class="portfolio">
+        <section class="portfolio">
           
-          <div class="portfolio__img-container portfolio__img-container_theme-laptop"></div>
-          <div class="box portfolio__box">
+          <div class="portfolio__img-container portfolio__img-container_theme_laptop"></div>
+
+          <div class="portfolio__box">
           
             <h2 class="heading portfolio__heading text-with-point">Portfolio</h2>
-            <span class="posrtfolio__text">We are small, but strong team</span>
-            <p class="description-text">No more pricing grids. No more fine print. 
-              Sending and receiving cash is free without gimmicks.</p>
-            <p class="description-text">The same debit card you use to buy coffee lets deposit money straight to
-                your bank account.</p>
-            <button class="btn btn_mgtop_10">More</button>
+            <span class="portfolio__text">We are small, but strong team</span>
+            
+            <p class="description-text">
+              No more pricing grids. No more fine print. 
+              Sending and receiving cash is free without gimmicks.
+            </p>
+            
+            <p class="description-text">
+              The same debit card you use to buy coffee lets deposit money straight to
+              your bank account.
+            </p>
+
+            <a href="#" class="anchor btn">More</a>
         
           </div>
 
-        </div>
+        </section>
 
         
 
         <div class="team" id="contact">
           
           <h2 class="heading text-with-point team__heading">Our team</h2>
-          <span class="description-text">They are big but still friendly.</span>
+          <span class="team__motto description-text">They are big but still friendly.</span>
           
           <div class="team__workers">
                
             <div class="team__worker">
+      
+              <img src="./img/man-1.jpg" alt="Joey" class="team__worker-img">
               
-              <div class="team__worker-img-cont  team__worker-img_theme_man1"></div>
-              <div class="box team__worker-info">
+              <div class="team__worker-info">
             
                 <span class="heading team__worker-name">Joey</span>
                 <span class="team__worker-job">Web developer</span>
@@ -116,10 +143,12 @@
             
             </div>
 
+
             <div class="team__worker">
               
-              <div class="team__worker-img-cont  team__worker-img_theme_man2"></div>
-              <div class="box team__worker-info">
+              <img src="./img/man-2.jpg" alt="Joey" class="team__worker-img">
+              
+              <div class="team__worker-info">
             
                 <span class="heading team__worker-name">Matt</span>
                 <span class="team__worker-job">Web designer</span>
@@ -129,10 +158,12 @@
             
             </div>
 
+
             <div class="team__worker">
               
-              <div class="team__worker-img-cont  team__worker-img_theme_man3"></div>
-              <div class="box team__worker-info">
+              <img src="./img/man-3.jpg" alt="Joey" class="team__worker-img">
+
+              <div class="team__worker-info">
             
                 <span class="heading team__worker-name">Mike</span>
                 <span class="team__worker-job">Copywriter</span>
@@ -144,7 +175,7 @@
 
           </div> 
 
-          <button class="btn btn_mgtop_10 team__btn">More</button>
+          <a href="#" class="anchor btn team__btn">More</a>
     
         </div>
       </div>
@@ -156,10 +187,10 @@
       <div class="footer__container page__inner">
             
           <ul class="list footer__list">
-            <li class=""><a href="#" class="anchor"><img src="img/footer-ico1.png" alt="twitter" class="footer__links"></a></li>
-            <li class=""><a href="#" class="anchor"><img src="img/footer-ico2.png" alt="instagram" class="footer__links"></a></li>
-            <li class=""><a href="#" class="anchor"><img src="img/footer-ico3.png" alt="facebook" class="footer__links"></a></li>
-            <li class=""><a href="#" class="anchor"><img src="img/footer-ico4.png" alt="google+" class="footer__links"></a></li>
+            <li><a href="#" class="anchor list__social-ico-container list__social-ico-container_ico_1"></a></li>
+            <li><a href="#" class="anchor list__social-ico-container list__social-ico-container_ico_2"></a></li>
+            <li><a href="#" class="anchor list__social-ico-container list__social-ico-container_ico_3"></a></li>
+            <li><a href="#" class="anchor list__social-ico-container list__social-ico-container_ico_4"></a></li>
           </ul>
           
           <span class="footer__copyrights">© Freelancer - Designed by Wojtek Kwiatkowski</span>

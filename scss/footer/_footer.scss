@@ -12,6 +12,7 @@
 }
 
 .footer__list {
+    justify-content: space-between;
     min-width: 120px;
     width: 15%;
 }
@@ -21,11 +22,26 @@
     font-family: $font-family-2;
 }
 
+.list__social-ico-container {
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+
+@for $i from 1 through 4 {
+    .list__social-ico-container_ico_#{$i} {
+        background: url(../img/footer-ico#{$i}.png) no-repeat;
+        background-position: center;
+    }
+} 
+
 @media screen and (max-width: 550px) {
+    
     .footer__container {
         flex-direction: column;
         justify-content: flex-start;
     }
+
     .footer__copyrights {
         margin-bottom: 10px;
     }

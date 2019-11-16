@@ -1,61 +1,55 @@
 .head {
     min-height: 100vh;
     position: relative;
+
+    &_theme_man {
+        background: url("../img/background-man.jpg") no-repeat;
+        background-size: cover;
+    }
+
+    &__motto-block {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &__motto-block-button {
+        color: white;
+        font-weight: 700;
+        padding: 5px;
+        width: 160px;
+        height: 50px; 
+        margin-top: 25px;
+        text-transform: uppercase;
+    }
 }
 
-.head_theme_man {
-    background: url("../img/background-man.jpg") no-repeat;
-    background-size: cover;
-}
+.motto-block {
+    &__heading {
+        font-size: 2.5rem;
+        margin-bottom: 5px;
+        display: flex;
+        flex-direction: column;
+        @include heading;
+        color: $heading-color;
+    }
 
-.head__box {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.text-type-1 {
-    @include heading;
-    color: $heading-color;
-}
-
-.head__heading {
-    font-size: 2.5rem;
-    margin-bottom: 5px;
-    display: flex;
-    flex-direction: column;
-}
-
-
-.head__text {
-    font-family: $font-family-2;
-    font-size: 1.2rem;
-    color: $heading-color;
-}
-
-.head__btn {
-    font-family: $font-family-2;
-    background-color: $color-1;
-    color: white;
-    font-weight: 700;
-    padding: 5px;
-    width: 160px;
-    height: 50px;
-    border-radius: 5px; 
-    margin-top: 25px;
-    text-transform: uppercase;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    &__text {
+        font-family: $font-family-2;
+        font-size: 1.2rem;
+        color: $heading-color;
+    }
 }
 
 /*Media*/
 
 @media screen and (max-width: 768px) {
-    .head__heading {
+    .motto-block__heading {
         font-size: 2rem;
     }
-    .head__btn {
-        height:30px;
+    
+    .head__motto-block-button {
+        height: 30px;
+        width: 120px;
     }
 }
